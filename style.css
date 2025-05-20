@@ -6,12 +6,13 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: #fffef9;
-  color: #222;
-  line-height: 1.6;
-  padding-top: 70px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
 }
+
 
 /* Navbar */
 .navbar {
@@ -87,7 +88,10 @@ body {
   border-radius: 16px;
   padding: 1rem;
   box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
+  transition: all 0.3s ease,
+            background-color 0.4s ease,
+            color 0.4s ease,
+            border-color 0.4s ease;
 }
 
 .article-card h2 {
@@ -177,4 +181,48 @@ article img, article video, article audio {
   .articles-container {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+/* Tema luminoasă (implicită) */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  --card-bg: #f7f7f7;
+  --filter-bg: #ffffff;
+  --border-color: #ddd;
+}
+
+/* Tema întunecată */
+body.dark {
+  --bg-color: #111111;
+  --text-color: #f0f0f0;
+  --card-bg: #1a1a1a;
+  --filter-bg: #1e1e1e;
+  --border-color: #444;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.article-card {
+  background: var(--card-bg);
+  border-color: var(--border-color);
+}
+
+#filters {
+  background: var(--filter-bg);
+  transition: background-color 0.4s ease;
+}
+
+#theme-toggle {
+  margin-left: auto;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: color 0.3s;
 }

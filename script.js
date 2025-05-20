@@ -148,3 +148,20 @@ function showLoader() {
 function hideLoader() {
   loader.classList.add("hidden");
 }
+
+const themeToggle = document.getElementById("theme-toggle");
+
+// Aplică tema salvată (dacă există)
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme === "dark") {
+  document.body.classList.add("dark");
+  themeToggle.textContent = "☀️";
+}
+
+// Toggle button
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  const isDark = document.body.classList.contains("dark");
+  themeToggle.textContent = isDark ? "☀️" : "🌙";
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+});
