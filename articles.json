@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Lumina dintr-un vers",
+    "date": "2024-10-01",
+    "categories": ["poezie", "personal"],
+    "content": "Într-un colț de inimă, versul mi-a crescut cu lumină. Poate-a fost din greșeală, poate dintr-o rană. Dar acum mă ține treaz, ca o stea într-o fereastră."
+  },
+  {
+    "title": "Micul dragon",
+    "date": "2023-11-15",
+    "categories": ["proză scurtă", "comercial"],
+    "content": "Se trezise dintr-un ou cât o nucă. Nu știa ce-i focul, dar îl purta în el. Primul om pe care-l văzu era un copil. Restul e istorie. <img src='https://via.placeholder.com/400x200.png?text=Dragon' alt='Dragon desenat' />"
+  },
+  {
+    "title": "Trei idei pentru România",
+    "date": "2024-05-10",
+    "categories": ["politic", "economic"],
+    "content": "1. Taxă 0 pentru start-up-uri în primii 3 ani. 2. Digitalizarea completă a administrației. 3. Să investim în educație, nu doar în autostrăzi. <a href='https://gov.ro' target='_blank'>Citește mai mult</a>"
+  },
+  {
+    "title": "Cântec pentru mama",
+    "date": "2024-03-08",
+    "categories": ["poezie", "personal"],
+    "content": "Mamă, ai fost cerul meu. Acum sunt steaua ta. <audio controls><source src='https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3' type='audio/mp3'>Browserul tău nu suportă audio.</audio>"
+  },
+  {
+    "title": "Jurnal de antreprenor",
+    "date": "2024-01-27",
+    "categories": ["profesional", "comercial"],
+    "content": "Primul client n-a plătit. Al doilea a plătit prea mult. Lecție: pune clar condițiile. <video width='100%' controls><source src='https://www.w3schools.com/html/mov_bbb.mp4' type='video/mp4'>Browserul tău nu suportă video.</video>"
+  },
+  {
+    "title": "Roman în lucru – capitolul 1",
+    "date": "2025-02-12",
+    "categories": ["roman"],
+    "content": "A început cu un zgomot în perete. Nimeni nu-l auzea, doar ea. Și când a deschis peretele, a descoperit o... lume. Nu un șoarece. Un portal."
+  },
+  {
+    "title": "GIF-ul perfect",
+    "date": "2023-09-10",
+    "categories": ["personal"],
+    "content": "Uneori un gif spune mai mult decât 1000 de cuvinte. <img src='https://media.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.gif' alt='GIF fericit' />"
+  },
+  {
+    "title": "Arta de a pierde timp",
+    "date": "2024-04-17",
+    "categories": ["personal", "economic"],
+    "content": "Procrastinarea e o formă de control. Dar și un dans al fricii. Când înveți să o observi, nu mai pierzi timp – doar alegi altceva."
+  },
+  {
+    "title": "Despre taxe și fantome",
+    "date": "2025-01-10",
+    "categories": ["economic"],
+    "content": "Sunt două lucruri inevitabile: moartea și taxele. Dar uneori, și taxele pot fi moartea unei idei bune."
+  },
+  {
+    "title": "Interviu cu un cal",
+    "date": "2024-07-01",
+    "categories": ["proză scurtă", "poezie"],
+    "content": "— Ce visezi? întrebă fetița. — Visez că zbor, răspunse calul. Și pășea ca și cum n-ar fi avut copite, ci nori."
+  },
+  {
+    "title": "Retrospectivă 2024",
+    "date": "2024-12-31",
+    "categories": ["personal", "profesional"],
+    "content": "Ce an! Am învățat că limitele nu sunt reale. Doar reguli temporare. 2025, vino!"
+  },
+  {
+    "title": "Fragment dintr-un viitor roman",
+    "date": "2025-05-01",
+    "categories": ["roman", "personal"],
+    "content": "„Știi de ce oamenii pleacă?” îl întrebase ea. „Pentru că nu mai aud cântecul locului.” Atunci a înțeles: trebuie să învețe să cânte din nou."
+  }
+]

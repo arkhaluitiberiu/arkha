@@ -4,63 +4,50 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arkha lui Tiberiu</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    p.a {
-        font-style: italic;
-    }
-
-    p.b {
-        text-decoration: underline;
-    }
-    
-    body, html {
-      height: 100%;
-      font-family: Arial, sans-serif;
-    }
-
-    .background {
-      background-image: url('natura.jpg'); /* Înlocuiește cu numele imaginii tale */
-      background-size: cover;
-      background-position: center;
-      filter: sepia(0.7);
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
-
-    .overlay {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(255, 255, 255, 0.2); /* opțional, estompează fundalul */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      text-shadow: 0 0 10px black;
-      font-size: 2rem;
-      padding: 1rem;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <div class="background"></div>
+  <header>
+    <div class="navbar" onclick="location.reload()">Arkha lui Tiberiu</div>
+  </header>
 
-  <div class="overlay">
-    <div>
-      <h1>Arkha lui Tiberiu</h1>
-      <p.a>Este natura.</p> <p.b> Oricine e binevenit!</p>
+  <main>
+    <section class="filters">
+      <div class="filter-buttons">
+        <button class="filter-btn" data-category="poezie">Poezie</button>
+        <button class="filter-btn" data-category="proză scurtă">Proză Scurtă</button>
+        <button class="filter-btn" data-category="roman">Roman</button>
+        <button class="filter-btn" data-category="politic">Politic</button>
+        <button class="filter-btn" data-category="economic">Economic</button>
+        <button class="filter-btn" data-category="personal">Personal</button>
+        <button class="filter-btn" data-category="profesional">Profesional</button>
+        <button class="filter-btn" data-category="comercial">Comercial</button>
+      </div>
+      <div class="sorter">
+        <label for="sort-select">Ordonare:</label>
+        <select id="sort-select">
+          <option value="newest">Cele mai noi</option>
+          <option value="oldest">Cele mai vechi</option>
+          <option value="longest">Cele mai lungi</option>
+          <option value="shortest">Cele mai scurte</option>
+        </select>
+      </div>
+    </section>
+
+    <div id="loader" class="loader hidden"></div>
+
+    <section id="articles-container" class="articles-container">
+      <!-- articolele vor fi inserate aici din JS -->
+    </section>
+
+    <div class="load-more-container">
+      <button id="load-more-btn">Mai multe articole</button>
     </div>
-  </div>
+  </main>
 
+  <script src="script.js"></script>
 </body>
 </html>
