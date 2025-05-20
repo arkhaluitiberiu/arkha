@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Simplu</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    .background {
+      background-image: url('natura.jpg'); /* Înlocuiește cu numele imaginii tale */
+      background-size: cover;
+      background-position: center;
+      filter: sepia(0.7);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.2); /* opțional, estompează fundalul */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      text-shadow: 0 0 10px black;
+      font-size: 2rem;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background"></div>
+
+  <div class="overlay">
+    <div>
+      <h1>Bine ai venit pe site-ul meu!</h1>
+      <p>Acesta este un șablon simplu cu fundal natural și filtru sepia.</p>
+    </div>
+  </div>
+
+</body>
+</html>
