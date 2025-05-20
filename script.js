@@ -153,10 +153,24 @@ const themeToggle = document.getElementById("theme-toggle");
 
 // Aplică tema salvată (dacă există)
 const savedTheme = localStorage.getItem("theme");
+
 if (savedTheme === "dark") {
   document.body.classList.add("dark");
   themeToggle.textContent = "☀️";
+} else if (savedTheme === "light") {
+  document.body.classList.remove("dark");
+  themeToggle.textContent = "🌙";
+} else {
+  // Detectare automată: dacă nu există alegere salvată
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  if (prefersDark) {
+    document.body.classList.add("dark");
+    themeToggle.textContent = "☀️";
+  } else {
+    themeToggle.textContent = "🌙";
+  }
 }
+
 
 // Toggle button
 themeToggle.addEventListener("click", () => {
@@ -164,4 +178,16 @@ themeToggle.addEventListener("click", () => {
   const isDark = document.body.classList.contains("dark");
   themeToggle.textContent = isDark ? "☀️" : "🌙";
   localStorage.setItem("theme", isDark ? "dark" : "light");
+});
+
+
+
+// Afișăm banner-ul doar dacă nu e deja acceptat
+if (!localStorage.getItem("cookiesAccepted")) {
+  document.getElementById("cookie-banner").style.display = "block";
+}
+
+document.getElementById("cookie-accept").addEventListener("click", () => {
+  localStorage.setItem("cookiesAccepted", "true");
+  document.getElementById("cookie-banner").style.display = "none";
 });
