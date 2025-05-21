@@ -16,58 +16,8 @@ fetch("articles.json")
   .then((res) => res.json())
   .then((data) => {
     allArticles = data;
-    applyFiltersAndSort();
   });
 
-// Apply filters and sort
-function applyFiltersAndSort() {
-  showLoader();
-  setTimeout(() => {
-    let filtered = [...allArticles];
-
-    // Apply filters
-    if (activeFilters.size > 0) {
-      filtered = filtered.filter((article) =>
-        article.categories.some((cat) => activeFilters.has(cat))
-      );
-    }
-
-    // Apply sort
-    switch (currentSort) {
-      case "newest":
-        filtered.sort((a, b) => new Date(b.date) - new Date(a.date));
-        break;
-      case "oldest":
-        filtered.sort((a, b) => new Date(a.date) - new Date(b.date));
-        break;
-      case "longest":
-        filtered.sort((a, b) => b.content.length - a.content.length);
-        break;
-      case "shortest":
-        filtered.sort((a, b) => a.content.length - b.content.length);
-        break;
-    }
-
-    visibleArticles = filtered;
-    currentIndex = 0;
-    articlesContainer.innerHTML = "";
-    renderNextBatch();
-    hideLoader();
-  }, 500);
-}
-
-// Render next 10 articles
-function renderNextBatch() {
-  const next = visibleArticles.slice(currentIndex, currentIndex + pageSize);
-  next.forEach(createArticleCard);
-  currentIndex += pageSize;
-
-  if (currentIndex >= visibleArticles.length) {
-    loadMoreBtn.style.display = "none";
-  } else {
-    loadMoreBtn.style.display = "block";
-  }
-}
 
 // Create individual article card
 function createArticleCard(article) {
@@ -110,44 +60,7 @@ function createArticleCard(article) {
   articlesContainer.appendChild(card);
 }
 
-// Filtering logic
-filterButtons.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const cat = btn.dataset.category;
-    if (activeFilters.has(cat)) {
-      activeFilters.delete(cat);
-      btn.classList.remove("active");
-    } else {
-      activeFilters.add(cat);
-      btn.classList.add("active");
-    }
-    applyFiltersAndSort();
-  });
-});
 
-// Sorting logic
-sortSelect.addEventListener("change", () => {
-  currentSort = sortSelect.value;
-  applyFiltersAndSort();
-});
-
-// Load more logic
-loadMoreBtn.addEventListener("click", () => {
-  showLoader();
-  setTimeout(() => {
-    renderNextBatch();
-    hideLoader();
-  }, 400);
-});
-
-// Loader handlers
-function showLoader() {
-  loader.classList.remove("hidden");
-}
-
-function hideLoader() {
-  loader.classList.add("hidden");
-}
 
 const themeToggle = document.getElementById("theme-toggle");
 
