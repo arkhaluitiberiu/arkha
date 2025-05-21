@@ -5,50 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arkha lui Tiberiu</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather&display=swap" rel="stylesheet" />
 </head>
-<body>
-
-  <header>
-    <div class="navbar" onclick="location.reload()">Arkha lui Tiberiu</div>
-    <button id="theme-toggle" title="Comută între moduri">🌙</button>
-  </header>
-
-  <main>
-    <section class="filters">
-      <div class="filter-buttons">
-        <button class="filter-btn" data-category="poezie">Poezie</button>
-        <button class="filter-btn" data-category="proză scurtă">Proză Scurtă</button>
-        <button class="filter-btn" data-category="roman">Roman</button>
-        <button class="filter-btn" data-category="politic">Politic</button>
-        <button class="filter-btn" data-category="economic">Economic</button>
-        <button class="filter-btn" data-category="personal">Personal</button>
-        <button class="filter-btn" data-category="profesional">Profesional</button>
-        <button class="filter-btn" data-category="comercial">Comercial</button>
-      </div>
-      <div class="sorter">
-        <label for="sort-select">Ordonare:</label>
-        <select id="sort-select">
-          <option value="newest">Cele mai noi</option>
-          <option value="oldest">Cele mai vechi</option>
-          <option value="longest">Cele mai lungi</option>
-          <option value="shortest">Cele mai scurte</option>
-        </select>
-      </div>
-    </section>
-
-    <div id="loader" class="loader hidden"></div>
-
-    <section id="articles-container" class="articles-container">
-      <!-- articolele vor fi inserate aici din JS -->
-    </section>
-
-    <div class="load-more-container">
-      <button id="load-more-btn">Mai multe articole</button>
-    </div>
+<body class="cover">
+  <main class="cover-content">
+    <h1>Arkha lui Tiberiu</h1>
+    <p class="subtitle">Singuri ne îmbunătățim, împreună evoluăm.</p>
+    <a href="cuprins.html" class="btn">Intră în carte</a>
   </main>
-
-  <script src="script.js"></script>
 </body>
 </html>
