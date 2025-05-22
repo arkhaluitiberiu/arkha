@@ -5,23 +5,36 @@
   <url>
     <loc>https://www.arkha.ro/index.html</loc>
     <lastmod>2025-05-21</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://www.arkha.ro/cuprins.html</loc>
     <lastmod>2025-05-21</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://www.arkha.ro/introducere.html</loc>
+    <loc>https://www.arkha.ro/despre-arkha.html</loc>
     <lastmod>2025-05-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.arkha.ro/capitol-1.html</loc>
+    <lastmod>2025-05-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+    <url>
+    <loc>https://www.arkha.ro/final-temporar.html</loc>
+    <lastmod>2025-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  
 </urlset>
