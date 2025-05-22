@@ -153,7 +153,7 @@ body {
 }
 
 .toc-list {
-  list-style: decimal inside;
+  list-style:  decimal inside;
   font-size: 1.1rem;
   line-height: 1.8;
 }
@@ -167,7 +167,21 @@ body {
   color: var(--accent);
 }
 
+.moc-list {
+  display: block;
+padding-top: 300 px;
+  list-style:  inside;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+.moc-list a {
+  text-decoration: none;
+  color: var(--text);
+}
 
+.moc-list a:hover {
+  color: var(--accent);
+}
 
 .image-block {
   margin: 2rem auto;
